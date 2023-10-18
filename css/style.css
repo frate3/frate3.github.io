@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap');
+
+h1{
+    color: aliceblue !important;
+    font-family: var(kanit);
+    font-size: 90px !important;
+    padding-top: 90px;
+
+}
+
+h2{
+    color: aliceblue;
+}
+
+p{
+    color: rgb(197, 210, 226) !important;
+    font-family: var(kanit);
+    font-size: 17px !important;
+}
+
+body {
+    background-color: rgb(10, 7, 34) !important;
+}
+
+li{
+    color: rgb(197, 210, 226);
+    font-size: 17px !important;
+}
+
+.nav-link active{
+    background-color: brown;
+}
+
+nav{
+    padding: 20px;
+}
+
+.lead{
+    font-size: 30px !important;
+    padding: 25px;
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
