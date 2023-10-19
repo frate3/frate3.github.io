@@ -28,16 +28,72 @@ https://github.com/Ashrom0/PedroHernandez-github.io
 
     <div class = "container text-center">
         <h1>Alex Fratepietro</h1>
+
+        <!-- give a small about me -->
+
         <h2>List of Projects</h2>
+        <!-- 
+          todo
+          Dino game
+         -->
         <div class="slideshow-container">
-            <div class="fade">
-                <div>
-                    <p>/20</p>
-                    <!-- https://www.w3schools.com/howto/howto_js_slideshow.asp -->
-                </div>
+
+            <div class="mySlides">
+              <div class="numbertext">1 / 5</div>
+              <img src="assets/images/Basketball.png" style="width:100%">
+              <div class="text">Summer project for basketball data analysis project.
+                <a href="http://frate.pythonanywhere.com/regression" target="_blank"> Link to website</a>
+                <br>
+                <a href="https://github.com/frate3/NBA" target="_blank">Link to github page</a>
+              </div>
             </div>
-        </div>
-        
+            
+            <div class="mySlides">
+              <div class="numbertext">2 / 5</div>
+              <img src="assets/images/InspiritAI.png" style="width:100%">
+              <div class="text">Summer program project present done on object detection in self-driving cars. Google Colab was used for coding. 
+                <a href="./assets/Summer 23 InsprirtAI Object Detection Presentation.pdf" class="nav-link active" target="_blank"><i class="fa-solid fa-file"></i> PDF of slideshow</a>
+              </div>
+              
+            </div>
+            
+            <div class="mySlides">
+              <div class="numbertext">3 / 5</div>
+              <img src="assets/images/IP10.png" style="width:100%">
+              <div class="text">Independent project done in 10th grade over the course of the school year. 
+                <a href="./assets/Independent Project slides.pdf" class="nav-link active" target="_blank"><i class="fa-solid fa-file"></i> PDF of slideshow</a>
+                
+              </div>
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">4 / 5</div>
+                <img src="assets/images/NYCBuildings.png" style="width:100%">
+                <div class="text">Data project for all named buildings in NYC. 
+                  <a href="https://nycbuildings.streamlit.app/" target="_blank">Link to website, might take a few minutes to launch!</a>
+                  <br>
+                  <a href="https://github.com/frate3/NYC-Buildings-2" target="_blank">Link to github page</a>
+                </div>
+              </div>
+              <div class="mySlides">
+                <div class="numbertext">5 / 5</div>
+                <img src="assets/images/UB.png" style="width:100%">
+                <div class="text">Summer game design project done with a teammate. Practiced concepts in world generation, Animation, inventories and 3D modeling.
+                  <a href="https://github.com/frate3/ubiquitous-fortnight" target="_blank">Link to github page</a>
+                </div>
+              </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
     </div>
 
 
@@ -50,12 +106,40 @@ https://github.com/Ashrom0/PedroHernandez-github.io
                 <a href="mailto:alexfrate12@gmail.com" class="nav-link active"><i class="fa-solid fa-envelope"></i> Email</a>
             </li>
             <li>
-                <a href="./assets/Pedro H Resume.pdf" class="nav-link active"><i class="fa-solid fa-file"></i> Resume</a>
+                <a href="./assets/Alex Fratepietro Resume Oct 2023.pdf" class="nav-link active"><i class="fa-solid fa-file"></i> Resume</a>
             </li>
         </ul>
     </nav>
 
     
     <script src="https://kit.fontawesome.com/ad4095d71e.js" crossorigin="anonymous"></script>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
   </body>
 </html>
